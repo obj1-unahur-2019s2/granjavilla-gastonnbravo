@@ -2,6 +2,7 @@ import wollok.game.*
 import hector.*
 import cultivos.*
 import oso.*
+import juego.*
 
 program farmville {
 	//var property personaje 
@@ -14,19 +15,32 @@ program farmville {
 	//  VISUALES
 	
 	//el addvisualcharacter le da movimiento con las teclas
- 	game.addVisualCharacter(hector)
- 	game.addVisualIn(new Maiz(), game.at(1, 1))
  	
- 	//ACCIONES
- 	keyboard.s().onPressDo({game.say(hector,"hola cracks ")})
- 	keyboard.o().onPressDo({hector.position(new Position(x = 0 , y = 0))})
- 	keyboard.p().onPressDo({hector.plantarMaiz()})
- 	keyboard.r().onPressDo({hector.regarPlanta()})
- 	keyboard.c().onPressDo({hector.cosecharPlanta()})
- 	keyboard.d().onPressDo({game.say(hector,"tengo cosechadas"+ hector.cantidadDePlantasCosechadas()+ "plantas")})
- 	// colisiones
- 	game.whenCollideDo(oso,{})
- 	
- 	//  COMIENZA
+	
+	
+	//VISUALES PERFECTO
+	
+	juegoGranja.configurarPersonaje()
+	
+	//CONTROL TECLADO
+	
+	juegoGranja.configurarTeclado()
+	
+	//COLISIONES PERFECTO
+	
+	juegoGranja.configurarColisiones()
+	juegoGranja.configurarAcciones()
+	
+	//START
 	game.start()
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
