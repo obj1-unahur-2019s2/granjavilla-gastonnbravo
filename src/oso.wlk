@@ -6,9 +6,13 @@ object oso {
 	method image() = "oso.jpg"
 	method moverEnDireccion(dir){
 		self.position(dir.siguientePosicion(self.position()))
-		
-		
 	}
+	method moverteAlaIzquierda(){
+		if(position.x() > 0){
+			position = position.left(1)
+		}
+	}
+	
 	
 	
 }

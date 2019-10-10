@@ -95,3 +95,7 @@ object juegoGranja {
 	
 }
 
+
+//en wollok el random es randomUpTo y para sacar los detras de la coma truncate()0
+//en otro lenguajes /round/floor
+
